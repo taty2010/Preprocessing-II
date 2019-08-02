@@ -1,12 +1,19 @@
 // Navigation Styles here
 
-.header-wrapper{
+header{
     width: @full-width;
     height: 100px;
-    border-bottom: 1px dashed @navigation-border;
-    .center(center,center, row);
+    border-bottom: 2px dashed @navigation-border;
+
+    .header-wrapper{
+        .center(center,center, row);
+        width: @full-width - 20%;
+        height: 100px;
+        margin: 0 auto;
+    }
+
     nav {
-        width: @full-width - 50%;
+        width: @full-width - 55%;
         font-weight: 800;
         a{
         text-decoration: none;
@@ -17,7 +24,7 @@
     }
 
     h1{
-        width: @full-width - 50%;
+        width: @full-width - 70%;
     }
 }
 
