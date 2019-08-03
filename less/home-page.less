@@ -1,4 +1,7 @@
 .hero{
+  position: relative;
+  left: 0;
+  top: 0;
   .hero-text{
     padding: 3% 0;
     border-bottom: 2px dashed @navigation-border;
@@ -16,6 +19,41 @@
     }
 
   }
+
+}
+
+.bus{
+  position: absolute;
+  left: 0;
+  top: 0; 
+  animation-name: bus;
+  .slide-out-right();
+
+    @-webkit-keyframes slide-out-right {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+        opacity: 1;
+      }
+    }
+    @keyframes slide-out-right {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+        opacity: 1;
+      }
+    }
+
 }
 
 .home {
