@@ -1,1 +1,24 @@
 // Mixins in here
+.center(@justify, @align-items, @flow){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align-items;
+    flex-flow: @flow;
+}
+
+.button(@color, @bg-color, @text-align){
+    background-color: @bg-color;
+    padding: 8% 0;
+    width: 80%;
+    color: @color;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: @text-align;
+    font-size: 1.8rem;
+
+}
+
+.slide-out-right {
+	-webkit-animation: slide-out-right 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-right 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
