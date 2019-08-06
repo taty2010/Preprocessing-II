@@ -1,1 +1,49 @@
 // Navigation Styles here
+
+header{
+    width: @full-width;
+    height: 100px;
+    border-bottom: 2px dashed @navigation-border;
+
+    .header-wrapper{
+        .center(center,center, row);
+        width: @full-width - 20%;
+        height: 100px;
+        margin: 0 auto;
+
+        @media @phone{
+            .center(center, center, column nowrap);
+            width: @full-width;
+        }
+    }
+
+    nav {
+        width: @full-width - 55%;
+        font-weight: 800;
+
+        @media @phone{
+            width: @full-width;
+            .center(center,center, row);
+        }
+
+        a{
+        text-decoration: none;
+        color: @shark;
+        padding: 0 5%;
+        font-size: 1.5rem;
+
+            @media @phone{
+                padding: 2% 6.5%;
+            }
+        }
+    }
+
+    h1{
+        width: @full-width - 70%;
+
+        @media @phone{
+            width: auto;
+        }
+    }
+}
+

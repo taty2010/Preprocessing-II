@@ -1,3 +1,66 @@
+.hero{
+  position: relative;
+  left: 0;
+  top: 0;
+  .hero-text{
+    padding: 3% 0;
+    border-bottom: 2px dashed @navigation-border;
+
+    @media @phone{
+      width: @full-width - 10%;
+      margin: 0 auto;
+      }
+  }
+
+  .hero-image{
+    @media @phone{
+    width: @full-width - 10%;
+    margin: 0 auto;
+    }
+
+  }
+
+}
+
+.bus{
+  position: absolute;
+  left: 0;
+  top: 0; 
+  animation-name: bus;
+  .slide-out-right();
+
+    @-webkit-keyframes slide-out-right {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+        opacity: 1;
+      }
+    }
+    @keyframes slide-out-right {
+      0% {
+        -webkit-transform: translateX(-800px);
+                transform: translateX(-800px);
+        opacity: 1;
+      }
+      50% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+}
+
 .home {
 
   .content-section {
@@ -6,16 +69,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @phone{
+      .center(center, center, column);
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+        @media @phone{
+          width: @full-width - 10%;
+        }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @phone{
+        width: @full-width - 10%;
+      }
 
       img {
         border-radius: 10px;
@@ -30,6 +103,10 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @phone{
+        padding-top: 10%;
+      }
     }
 
     .img-content {
@@ -42,6 +119,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @phone{
+      width: @full-width - 10%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +134,28 @@
     display: flex;
     justify-content: space-between;
 
+    @media @phone{
+      .center(center, center, column);
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @phone{
+        width: @full-width - 30%;
+      }
     }
   }
 }// home
+
+.btn{
+  .button(@main-bg, @button-bg, center);
+    background-color: darken(@eastern-blue, 15%);
+
+    @media @phone{
+      width: @full-width;
+      padding: 3% 0;
+      margin: 0 auto;
+    }
+}
