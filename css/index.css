@@ -1,6 +1,6 @@
 .slide-out-right {
-  -webkit-animation: slide-out-right 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-right 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -264,8 +264,8 @@ header h1 {
   left: 0;
   top: 0;
   animation-name: bus;
-  -webkit-animation: slide-out-right 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-right 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-right 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 @-webkit-keyframes slide-out-right {
   0% {
@@ -281,13 +281,18 @@ header h1 {
 }
 @keyframes slide-out-right {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(-800px);
+    transform: translateX(-800px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
